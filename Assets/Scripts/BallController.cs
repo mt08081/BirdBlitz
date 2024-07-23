@@ -1,3 +1,5 @@
+/*
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -81,3 +83,36 @@ public class BallController : MonoBehaviour
 }
 
 // Making small temp changes
+
+*/
+
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BallController : MonoBehaviour
+{
+    //public float speed = 5.0f;
+    public float rotationSpeed = 360.0f;
+    private Rigidbody2D rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        RollForward();
+    }
+
+    void RollForward()
+    {
+        // Move the ball forward
+        // rb.velocity = new Vector2(speed, rb.velocity.y);
+
+        // Rotate the ball to give the rolling effect
+        transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
+    }
+}
