@@ -10,10 +10,10 @@ public class Rotation : MonoBehaviour
         
     }
 
-    public float rotationspeed=50;
+    public float rotationspeed=50f;
 
     // Update is called once per frame
-    void FixedUpdate()
+    void FixedUpdate() 
     {
         transform.Rotate(0, rotationspeed* Time.deltaTime,0);
     }

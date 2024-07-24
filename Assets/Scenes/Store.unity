@@ -198,7 +198,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276292289}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbd2de0bd7889e24989a0d0b782ba7e6, type: 3}
   m_Name: 
@@ -515,10 +515,10 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!4 &736032107
@@ -882,6 +882,7 @@ GameObject:
   - component: {fileID: 1516355522}
   - component: {fileID: 1516355521}
   - component: {fileID: 1516355523}
+  - component: {fileID: 1516355524}
   m_Layer: 0
   m_Name: beachball
   m_TagString: Untagged
@@ -950,7 +951,7 @@ Transform:
   m_GameObject: {fileID: 1516355520}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 361.91, y: 3.87, z: 2.5326464}
+  m_LocalPosition: {x: 358.99, y: 3.64, z: 2.5326464}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -975,6 +976,19 @@ MonoBehaviour:
   ownedBalls: []
   buyButton: {fileID: 0}
   buyButtonText: {fileID: 0}
+--- !u!114 &1516355524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516355520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd2de0bd7889e24989a0d0b782ba7e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationspeed: 50
 --- !u!1 &1635387273
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,6 +999,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1635387275}
   - component: {fileID: 1635387274}
+  - component: {fileID: 1635387276}
+  - component: {fileID: 1635387277}
   m_Layer: 0
   m_Name: football
   m_TagString: Untagged
@@ -1053,12 +1069,44 @@ Transform:
   m_GameObject: {fileID: 1635387273}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 361.86, y: 3.86, z: 2.5326464}
+  m_LocalPosition: {x: 359.01, y: 3.67, z: 2.5326464}
   m_LocalScale: {x: 0.42738497, y: 0.45680147, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 276292293}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1635387276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635387273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5a5e0f52067c0841af76f5d30711f61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skins: []
+  current_ball_index: 0
+  balls: []
+  moneyScript: {fileID: 0}
+  ownedBalls: []
+  buyButton: {fileID: 0}
+  buyButtonText: {fileID: 0}
+--- !u!114 &1635387277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635387273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd2de0bd7889e24989a0d0b782ba7e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationspeed: 50
 --- !u!1 &1675573337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,6 +1520,7 @@ GameObject:
   - component: {fileID: 1853125202}
   - component: {fileID: 1853125201}
   - component: {fileID: 1853125203}
+  - component: {fileID: 1853125204}
   m_Layer: 0
   m_Name: basketball
   m_TagString: Untagged
@@ -1540,7 +1589,7 @@ Transform:
   m_GameObject: {fileID: 1853125200}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 361.85, y: 3.91, z: 2.5326464}
+  m_LocalPosition: {x: 359.04, y: 3.7, z: 2.5326464}
   m_LocalScale: {x: 0.14729412, y: 0.16426335, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1565,6 +1614,19 @@ MonoBehaviour:
   ownedBalls: []
   buyButton: {fileID: 0}
   buyButtonText: {fileID: 0}
+--- !u!114 &1853125204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853125200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd2de0bd7889e24989a0d0b782ba7e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationspeed: 50
 --- !u!1 &1884157268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,10 +1675,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
