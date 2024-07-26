@@ -670,7 +670,7 @@ public class ShowSkin : MonoBehaviour
         Debug.Log("Money is "+ moneyScript.money);
         BallsBlueprint currentBall = balls[current_ball_index];
 
-        if (moneyScript != null && moneyScript.GetMoney() >= currentBall.price)
+        if (moneyScript != null && moneyScript.GetMoney() >= currentBall.price) // mayb add on click here
         {
             moneyScript.subtractMoney(currentBall.price);
             ownedBalls.Add(currentBall.name);
