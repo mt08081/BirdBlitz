@@ -635,6 +635,8 @@ public class ShowSkin : MonoBehaviour
 
     public void ChangeNext()
     {
+       Debug.Log("Owned balls are: " + string.Join(", ", ownedBalls));  // Corrected debug statement
+
         skins[current_ball_index].SetActive(false);
         current_ball_index++;
         if (current_ball_index == skins.Length)
@@ -648,6 +650,7 @@ public class ShowSkin : MonoBehaviour
 
     public void ChangePrevious()
     {
+        ownedBalls.Clear();
         skins[current_ball_index].SetActive(false);
         current_ball_index--;
         if (current_ball_index == -1)
@@ -670,10 +673,12 @@ public class ShowSkin : MonoBehaviour
         Debug.Log("Money is "+ moneyScript.money);
         BallsBlueprint currentBall = balls[current_ball_index];
 
-        if (moneyScript != null && moneyScript.GetMoney() >= currentBall.price)
+        if (moneyScript != null && moneyScript.GetMoney() >= currentBall.price) // mayb add on click here
         {
             moneyScript.subtractMoney(currentBall.price);
+            Debug.Log(" Ball being bought is " + currentBall.name);
             ownedBalls.Add(currentBall.name);
+            Debug.Log("owned balls are " + ownedBalls);
             PlayerPrefs.SetInt(currentBall.name, 1); // Mark as owned
             Debug.Log("Bought " + currentBall.name + " for " + currentBall.price);
             UpdateBuyButtonText();  // Update the button text and state after purchase
@@ -689,7 +694,8 @@ public class ShowSkin : MonoBehaviour
         if (buyButtonText != null && balls != null && balls.Length > 0)
         {
             BallsBlueprint currentBall = balls[current_ball_index];
-            if (ownedBalls.Contains(currentBall.name) || currentBall.unlocked)
+            if (ownedBalls.Contains(currentBall.name)) 
+            //  if (ownedBalls.Contains(currentBall.name) || currentBall.unlocked)
             {
                 buyButton.interactable = false;
                 buyButtonText.text = currentBall.name + " already owned";
