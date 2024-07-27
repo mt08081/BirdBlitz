@@ -9,4 +9,9 @@ public class Home : MonoBehaviour
     {
         SceneManager.LoadScene ("SampleScene");
     }
+
+    public void OnShopButton ()
+    {
+        SceneManager.LoadScene ("Store");
+    }
 }
