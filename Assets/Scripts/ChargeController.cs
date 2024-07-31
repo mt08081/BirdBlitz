@@ -10,19 +10,20 @@ public class ChargeController : MonoBehaviour
     public float maxCharge = 100.0f;
     private float currentCharge = 0.0f;
     private bool isCharging = false;
+    private bool isPaused = false; // Add this flag
     private Rigidbody2D ballRb;
-    //private float minValue;
 
     void Start()
     {
-        ballRb = GameObject.Find("Ball").GetComponent<Rigidbody2D>(); // Adjust the name if necessary
+        ballRb = GameObject.Find("Ball").GetComponent<Rigidbody2D>();
         chargeBar.maxValue = maxCharge;
         chargeBar.value = 0;
-        //minValue = chargeBar.minValue;
     }
 
     void Update()
     {
+        if (isPaused) return; // If the game is paused, do nothing
+
         if (Input.GetMouseButtonDown(0))
         {
             isCharging = true;
@@ -42,6 +43,19 @@ public class ChargeController : MonoBehaviour
         }
     }
 
+    public void PauseGame() // Call this function when the pause/menu button is pressed
+    {
+        isPaused = true;
+        isCharging = false; // Stop charging when the game is paused
+        chargeBar.value = 0;
+    }
+
+    public void ResumeGame() // Call this function when the game is resumed
+    {
+        isPaused = false;
+        chargeBar.value = 0;
+    }
+
     void Charge()
     {
         if (currentCharge < maxCharge)
@@ -53,7 +67,7 @@ public class ChargeController : MonoBehaviour
 
     void ApplyForce()
     {
-        float force = currentCharge; // Adjust the force calculation as needed
+        float force = currentCharge;
         if (force < 6.0f)
         {
             force = 6.0f;

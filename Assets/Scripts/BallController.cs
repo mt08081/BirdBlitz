@@ -90,16 +90,23 @@ public class BallController : MonoBehaviour
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BallController : MonoBehaviour
 {
     //public float speed = 5.0f;
     public float rotationSpeed = 360.0f;
     private Rigidbody2D rb;
+    private UIManager uiManager;
+    private GameController gameController;
+
+    
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        uiManager = FindObjectOfType<UIManager>();
+        gameController = FindObjectOfType<GameController>();
     }
 
     void Update()
@@ -114,5 +121,22 @@ public class BallController : MonoBehaviour
 
         // Rotate the ball to give the rolling effect
         transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Crystal"))
+        {
+            Destroy(other.gameObject);
+            uiManager.IncrementCrystalCount();
+        }
+        else if (other.gameObject.CompareTag("Spike"))
+        {
+            gameController.TriggerLoss();
+        }
+        else if (other.gameObject.CompareTag("Portal"))
+        {
+            gameController.TriggerWin();
+        }
     }
 }
