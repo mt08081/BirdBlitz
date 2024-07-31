@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Spike
+  - Crystal
+  - Portal
   layers:
   - Default
   - TransparentFX
