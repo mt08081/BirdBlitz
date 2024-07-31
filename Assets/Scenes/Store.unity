@@ -180,14 +180,17 @@ MonoBehaviour:
     index: 0
     price: 0
     unlocked: 0
+    sprite: {fileID: 0}
   - name: beachball
     index: 1
     price: 60
     unlocked: 0
+    sprite: {fileID: 0}
   - name: football
     index: 2
     price: 200
     unlocked: 0
+    sprite: {fileID: 0}
   moneyScript: {fileID: 276292290}
   ownedBalls:
   - basketball
