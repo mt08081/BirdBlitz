@@ -14,4 +14,10 @@ public class Home : MonoBehaviour
     {
         SceneManager.LoadScene ("Store");
     }
+
+//    public void OnStagesButton ()
+//    {
+//      SceneManager.LoadScene ("Level Select");
+//    }
 }
+

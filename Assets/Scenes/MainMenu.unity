@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.137, y: -422.961}
-  m_SizeDelta: {x: 665.378, y: 163.216}
+  m_AnchoredPosition: {x: 5.8691, y: -367.15}
+  m_SizeDelta: {x: 661.2441, y: 134.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &19327232
 MonoBehaviour:
@@ -712,8 +712,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 638.352, y: -422.96}
-  m_SizeDelta: {x: 354.361, y: 163.22}
+  m_AnchoredPosition: {x: 638.352, y: -367.15}
+  m_SizeDelta: {x: 354.361, y: 134.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &913928116
 MonoBehaviour:
@@ -835,8 +835,8 @@ Transform:
   m_GameObject: {fileID: 938919786}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0361, y: -0.2218, z: 0}
-  m_LocalScale: {x: 1.5588543, y: 1.6553906, z: 1}
+  m_LocalPosition: {x: 0.0059, y: 26.1158, z: 0}
+  m_LocalScale: {x: 1.24667, y: 1.1626229, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 231671869}
@@ -1004,7 +1004,7 @@ RectTransform:
   - {fileID: 19327231}
   - {fileID: 1494675474}
   - {fileID: 913928115}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1949532859}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1181,8 +1181,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -607.667, y: -422.96}
-  m_SizeDelta: {x: 342.244, y: 163.22}
+  m_AnchoredPosition: {x: -607.667, y: -367.15033}
+  m_SizeDelta: {x: 342.244, y: 134.2806}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1494675475
 MonoBehaviour:
@@ -1227,7 +1227,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1494675476}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 951158397}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1494675476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1355,7 +1367,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 951158402}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
@@ -1363,5 +1376,4 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1949532859}
-  - {fileID: 951158402}
   - {fileID: 135978034}
