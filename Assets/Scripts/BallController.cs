@@ -94,19 +94,20 @@ using TMPro;
 
 public class BallController : MonoBehaviour
 {
-    //public float speed = 5.0f;
     public float rotationSpeed = 360.0f;
     private Rigidbody2D rb;
     private UIManager uiManager;
     private GameController gameController;
+    private Animator animator;
 
-    
+    private bool isInvincible = false; // Track the invincibility state
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         uiManager = FindObjectOfType<UIManager>();
         gameController = FindObjectOfType<GameController>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -116,9 +117,6 @@ public class BallController : MonoBehaviour
 
     void RollForward()
     {
-        // Move the ball forward
-        // rb.velocity = new Vector2(speed, rb.velocity.y);
-
         // Rotate the ball to give the rolling effect
         transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
     }
@@ -132,15 +130,39 @@ public class BallController : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Spike"))
         {
-            gameController.TriggerLoss();
+            if (!isInvincible)
+            {
+                gameController.TriggerLoss();
+            }
         }
         else if (other.gameObject.CompareTag("Enemy"))
         {
-            gameController.TriggerLoss();
+            if (!isInvincible)
+            {
+                gameController.TriggerLoss();
+            }
         }
         else if (other.gameObject.CompareTag("Portal"))
         {
             gameController.TriggerWin();
         }
+        else if (other.gameObject.CompareTag("Powerup"))
+        {
+            Destroy(other.gameObject);
+            StartCoroutine(ActivateInvincibility());
+        }
+    }
+
+    IEnumerator ActivateInvincibility()
+    {
+        isInvincible = true;
+        animator.SetBool("isInvincible", true);
+
+        yield return new WaitForSeconds(3); // Duration of the invincibility
+
+        isInvincible = false;
+        animator.SetBool("isInvincible", false);
     }
 }
+
+

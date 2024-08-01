@@ -9,6 +9,7 @@ TagManager:
   - Crystal
   - Portal
   - Enemy
+  - Powerup
   layers:
   - Default
   - TransparentFX
