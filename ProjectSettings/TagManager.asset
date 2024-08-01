@@ -8,6 +8,7 @@ TagManager:
   - Spike
   - Crystal
   - Portal
+  - Enemy
   layers:
   - Default
   - TransparentFX

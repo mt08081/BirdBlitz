@@ -134,6 +134,10 @@ public class BallController : MonoBehaviour
         {
             gameController.TriggerLoss();
         }
+        else if (other.gameObject.CompareTag("Enemy"))
+        {
+            gameController.TriggerLoss();
+        }
         else if (other.gameObject.CompareTag("Portal"))
         {
             gameController.TriggerWin();
