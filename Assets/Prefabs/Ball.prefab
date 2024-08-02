@@ -163,6 +163,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 360
+  selectedBall:
+    name: 
+    index: 0
+    price: 0
+    unlocked: 0
+    sprite: {fileID: 0}
 --- !u!120 &8991658546745307999
 LineRenderer:
   serializedVersion: 2

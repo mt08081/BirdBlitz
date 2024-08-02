@@ -99,19 +99,42 @@ public class BallController : MonoBehaviour
     private Rigidbody2D rb;
     private UIManager uiManager;
     private GameController gameController;
+    // public static BallController Instance;
+    // public BallsBlueprint selectedBall;
+    // public Sprite sprite;
+    // private SpriteRenderer spriteRenderer;
 
     
 
     void Start()
     {
+        // Debug.Log(" Selected ball from store is" + selectedBall.name);
+        // spriteRenderer = GetComponent<SpriteRenderer>();
+        // spriteRenderer.sprite = selectedBall.sprite;
         rb = GetComponent<Rigidbody2D>();
         uiManager = FindObjectOfType<UIManager>();
         gameController = FindObjectOfType<GameController>();
+        // if (Instance == null)
+        // {
+        //     Instance = this;
+        //     DontDestroyOnLoad(gameObject);
+        // }
+        // else
+        // {
+        //     Destroy(gameObject);
+        // }
+        
+
     }
 
     void Update()
     {
+        // Debug.Log(" Selected ball from store is" + selectedBall.name);
+        // spriteRenderer = GetComponent<SpriteRenderer>();
+        // spriteRenderer.sprite = selectedBall.sprite;
+        //  Debug.Log(" Selected ball SPRITE  from store is" + selectedBall.sprite);
         RollForward();
+
     }
 
     void RollForward()
@@ -139,4 +162,13 @@ public class BallController : MonoBehaviour
             gameController.TriggerWin();
         }
     }
+    // public void SetSelectedBall(BallsBlueprint ball)
+    // {
+    //     selectedBall = ball;
+    // }
+
+    // public BallsBlueprint GetSelectedBall()
+    // {
+    //     return selectedBall;
+    // }
 }

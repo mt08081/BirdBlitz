@@ -196,6 +196,14 @@ MonoBehaviour:
   - basketball
   buyButton: {fileID: 1675573339}
   buyButtonText: {fileID: 654691108}
+  selectButton: {fileID: 1698433863}
+  select: {fileID: 0}
+  displayImage:
+    name: 
+    index: 0
+    price: 0
+    unlocked: 0
+    sprite: {fileID: 0}
 --- !u!114 &276292292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,7 +344,7 @@ GameObject:
   - component: {fileID: 428085197}
   - component: {fileID: 428085196}
   m_Layer: 5
-  m_Name: 'Back '
+  m_Name: Select
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1271,6 +1279,14 @@ MonoBehaviour:
   ownedBalls: []
   buyButton: {fileID: 0}
   buyButtonText: {fileID: 0}
+  selectButton: {fileID: 0}
+  select: {fileID: 0}
+  displayImage:
+    name: 
+    index: 0
+    price: 0
+    unlocked: 0
+    sprite: {fileID: 0}
 --- !u!114 &1516355524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1389,6 +1405,14 @@ MonoBehaviour:
   ownedBalls: []
   buyButton: {fileID: 0}
   buyButtonText: {fileID: 0}
+  selectButton: {fileID: 0}
+  select: {fileID: 0}
+  displayImage:
+    name: 
+    index: 0
+    price: 0
+    unlocked: 0
+    sprite: {fileID: 0}
 --- !u!114 &1635387277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1535,6 +1559,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675573337}
   m_CullTransparentMesh: 1
+--- !u!1001 &1676743977
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3284652932759812965, guid: 0caa697ee66827a488d89d759f2a5dfd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284652932759812965, guid: 0caa697ee66827a488d89d759f2a5dfd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284652932759812965, guid: 0caa697ee66827a488d89d759f2a5dfd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284652932759812965, guid: 0caa697ee66827a488d89d759f2a5dfd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284652932759812965, guid: 0caa697ee66827a488d89d759f2a5dfd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284652932759812965, guid: 0caa697ee66827a488d89d759f2a5dfd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284652932759812965, guid: 0caa697ee66827a488d89d759f2a5dfd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284652932759812965, guid: 0caa697ee66827a488d89d759f2a5dfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284652932759812965, guid: 0caa697ee66827a488d89d759f2a5dfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284652932759812965, guid: 0caa697ee66827a488d89d759f2a5dfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421606553831226997, guid: 0caa697ee66827a488d89d759f2a5dfd, type: 3}
+      propertyPath: m_Name
+      value: Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695493239363739174, guid: 0caa697ee66827a488d89d759f2a5dfd, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0caa697ee66827a488d89d759f2a5dfd, type: 3}
 --- !u!1 &1698433861
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,10 +1703,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 276292290}
-        m_TargetAssemblyTypeName: Money, Assembly-CSharp
-        m_MethodName: addMoney
-        m_Mode: 3
+      - m_Target: {fileID: 276292291}
+        m_TargetAssemblyTypeName: ShowSkin, Assembly-CSharp
+        m_MethodName: UpdateDisplayImage
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2042,6 +2127,14 @@ MonoBehaviour:
   ownedBalls: []
   buyButton: {fileID: 0}
   buyButtonText: {fileID: 0}
+  selectButton: {fileID: 0}
+  select: {fileID: 0}
+  displayImage:
+    name: 
+    index: 0
+    price: 0
+    unlocked: 0
+    sprite: {fileID: 0}
 --- !u!114 &1853125204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2573,3 +2666,4 @@ SceneRoots:
   - {fileID: 1884157272}
   - {fileID: 1094378680}
   - {fileID: 276292293}
+  - {fileID: 1676743977}
