@@ -12,7 +12,6 @@ TagManager:
   - Powerup
   - Powerup_J
   - Powerup_G
-  - Powerup_C
   layers:
   - Default
   - TransparentFX
