@@ -102,17 +102,37 @@ public class BallController : MonoBehaviour
 
     private bool isInvincible = false; // Track the invincibility state
 
+    private ChargeController chargeController;
+
+    private bool isGrounded = false;
+
+    public Transform groundFeeler; // Assign the transparent circle object in the Inspector
+    public float groundDetectionRadius = 0.1f; // Adjust this value to fine-tune detection
+
+    private Collider2D[] detectedColliders = new Collider2D[10];
+    public LayerMask groundLayerMask; // Assign the "Ground" layer in the Inspector
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         uiManager = FindObjectOfType<UIManager>();
         gameController = FindObjectOfType<GameController>();
         animator = GetComponent<Animator>();
+        chargeController = GameObject.FindObjectOfType<ChargeController>();
     }
 
     void Update()
     {
         RollForward();
+
+        bool isGrounded = IsGrounded();
+        chargeController.SetGrounded(isGrounded);
+    }
+
+    bool IsGrounded()
+    {
+        int detectedColliderCount = Physics2D.OverlapCircleNonAlloc(groundFeeler.position, groundDetectionRadius, detectedColliders, groundLayerMask);
+        return detectedColliderCount > 0;
     }
 
     void RollForward()
@@ -153,12 +173,14 @@ public class BallController : MonoBehaviour
         }
     }
 
+    
+
     IEnumerator ActivateInvincibility()
     {
         isInvincible = true;
         animator.SetBool("isInvincible", true);
 
-        yield return new WaitForSeconds(3); // Duration of the invincibility
+        yield return new WaitForSeconds(3.5f); // Duration of the invincibility
 
         isInvincible = false;
         animator.SetBool("isInvincible", false);
