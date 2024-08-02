@@ -105,8 +105,6 @@ public class BallController : MonoBehaviour
 
     private bool isDoubleJump = false; // Track the Double Jump state
 
-    private bool isDoubleCrystals = false; // Track the Double Crystals state
-
     private ChargeController chargeController;
 
     private bool isGrounded = false;
@@ -157,10 +155,6 @@ public class BallController : MonoBehaviour
         {
             Destroy(other.gameObject);
             uiManager.IncrementCrystalCount();
-            if (isDoubleCrystals)
-            {
-                uiManager.IncrementCrystalCount();
-            }
         }
         else if (other.gameObject.CompareTag("Spike"))
         {
@@ -190,20 +184,22 @@ public class BallController : MonoBehaviour
             Destroy(other.gameObject);
             StartCoroutine(ActivateDoubleJump());
         }
-        else if (other.gameObject.CompareTag("Powerup_C"))
-        {
-            Destroy(other.gameObject);
-            StartCoroutine(ActivateDoubleCrystals());
-        }    
     }
 
-    
-
-    IEnumerator ActivateDoubleCrystals()
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        isDoubleCrystals = true;
-        yield return new WaitForSeconds(6f);
-        isDoubleCrystals = false;
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            chargeController.isGrounded2 = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            chargeController.isGrounded2 = false;
+        }
     }
 
     IEnumerator ActivateDoubleJump()

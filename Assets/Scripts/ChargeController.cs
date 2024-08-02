@@ -14,7 +14,7 @@ public class ChargeController : MonoBehaviour
     private Rigidbody2D ballRb;
 
     private bool isGrounded = false;
-    //public bool isGrounded2 = false;
+    public bool isGrounded2 = false;
 
     public int jumpCount = 0;
     public int maxJumps = 1;
