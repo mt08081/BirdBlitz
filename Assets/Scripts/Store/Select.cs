@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName = "New Ball", menuName = "Balls/Ball")]
+[CreateAssetMenu(fileName = "SpriteGen", menuName = "Ball")]
 public class Select : ScriptableObject
 {
     // Start is called before the first frame update
