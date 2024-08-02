@@ -91,6 +91,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UIElements;
 
 public class BallController : MonoBehaviour
 {
@@ -131,6 +132,9 @@ public class BallController : MonoBehaviour
 
         bool isGrounded = IsGrounded();
         chargeController.SetGrounded(isGrounded);
+
+        // Get the y value of the object
+        Debug.Log(transform.position.y);
     }
 
     bool IsGrounded()

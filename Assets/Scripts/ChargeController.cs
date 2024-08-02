@@ -16,7 +16,7 @@ public class ChargeController : MonoBehaviour
     private bool isGrounded = false;
     public bool isGrounded2 = false;
 
-    private int jumpCount = 0;
+    public int jumpCount = 0;
     public int maxJumps = 1;
 
     public void IncrementMaxJumps()
@@ -46,7 +46,7 @@ public class ChargeController : MonoBehaviour
     {
         if (isPaused) return; // If the game is paused, do nothing
 
-        Debug.Log(jumpCount);
+        //Debug.Log(jumpCount);
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -67,7 +67,7 @@ public class ChargeController : MonoBehaviour
             currentCharge = 0;
             chargeBar.value = 0;
         }
-        else if (isGrounded2)
+        else if (isGrounded && ballRb.velocity.y < 0)
         {
             jumpCount = 0;
         }
