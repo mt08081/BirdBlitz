@@ -102,6 +102,8 @@ public class BallController : MonoBehaviour
 
     private bool isInvincible = false; // Track the invincibility state
 
+    private bool isDoubleJump = false; // Track the Double Jump state
+
     private ChargeController chargeController;
 
     private bool isGrounded = false;
@@ -168,14 +170,45 @@ public class BallController : MonoBehaviour
         {
             gameController.TriggerWin();
         }
-        else if (other.gameObject.CompareTag("Powerup"))
+        else if (other.gameObject.CompareTag("Powerup_G"))
         {
             Destroy(other.gameObject);
             StartCoroutine(ActivateInvincibility());
         }
+        else if (other.gameObject.CompareTag("Powerup_J"))
+        {
+            Destroy(other.gameObject);
+            StartCoroutine(ActivateDoubleJump());
+        }
     }
 
-    
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            chargeController.isGrounded2 = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            chargeController.isGrounded2 = false;
+        }
+    }
+
+    IEnumerator ActivateDoubleJump()
+    {
+        isDoubleJump = true;
+        chargeController.IncrementMaxJumps();
+
+        yield return new WaitForSeconds(3.5f);
+
+        isDoubleJump = false;
+        chargeController.DecrementMaxJumps();
+
+    }
 
     IEnumerator ActivateInvincibility()
     {

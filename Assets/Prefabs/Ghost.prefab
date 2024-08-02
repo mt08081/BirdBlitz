@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1210916073568483567}
   m_Layer: 0
   m_Name: Ghost
-  m_TagString: Powerup
+  m_TagString: Powerup_G
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

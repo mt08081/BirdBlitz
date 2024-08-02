@@ -14,6 +14,21 @@ public class ChargeController : MonoBehaviour
     private Rigidbody2D ballRb;
 
     private bool isGrounded = false;
+    public bool isGrounded2 = false;
+
+    private int jumpCount = 0;
+    public int maxJumps = 1;
+
+    public void IncrementMaxJumps()
+    {
+        maxJumps++;
+        Debug.Log(maxJumps);
+    }
+
+    public void DecrementMaxJumps() 
+    { 
+        maxJumps--; 
+    }
 
     public void SetGrounded(bool grounded)
     {
@@ -31,23 +46,30 @@ public class ChargeController : MonoBehaviour
     {
         if (isPaused) return; // If the game is paused, do nothing
 
+        Debug.Log(jumpCount);
+
         if (Input.GetMouseButtonDown(0))
         {
             isCharging = true;
         }
 
-        if (Input.GetMouseButtonUp(0) && isGrounded)
+        if (Input.GetMouseButtonUp(0) && (isGrounded || jumpCount < maxJumps))
         {
             isCharging = false;
             ApplyForce();
             currentCharge = 0;
             chargeBar.value = 0;
+            jumpCount++;
         }
         else if (Input.GetMouseButtonUp(0))
         {
             isCharging = false;
             currentCharge = 0;
             chargeBar.value = 0;
+        }
+        else if (isGrounded2)
+        {
+            jumpCount = 0;
         }
 
         if (isCharging)
@@ -85,6 +107,8 @@ public class ChargeController : MonoBehaviour
         {
             force = 6.0f;
         }
+
+        ballRb.velocity = new Vector2(ballRb.velocity.x, 0); // Reset the vertical velocity
 
         ballRb.AddForce(new Vector2(0, force), ForceMode2D.Impulse);
         Debug.Log(force);

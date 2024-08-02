@@ -10,6 +10,8 @@ TagManager:
   - Portal
   - Enemy
   - Powerup
+  - Powerup_J
+  - Powerup_G
   layers:
   - Default
   - TransparentFX
@@ -18,8 +20,8 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
+  - BallShadow
+  - Enemy
   - 
   - 
   - 
