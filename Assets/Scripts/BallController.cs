@@ -105,6 +105,8 @@ public class BallController : MonoBehaviour
 
     private bool isDoubleJump = false; // Track the Double Jump state
 
+    private bool isDoubleCrystals = false;
+
     private ChargeController chargeController;
 
     private bool isGrounded = false;
@@ -184,43 +186,46 @@ public class BallController : MonoBehaviour
             Destroy(other.gameObject);
             StartCoroutine(ActivateDoubleJump());
         }
+<<<<<<< HEAD
+        else if (other.gameObject.CompareTag("Powerup_C"))
+=======
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-<<<<<<< Updated upstream
         if (collision.gameObject.CompareTag("Ground"))
+>>>>>>> parent of effe87b (Level 5 completed)
         {
-            chargeController.isGrounded2 = true;
+            Destroy(other.gameObject);
+            StartCoroutine(ActivateDoubleCrystals());
         }
     }
 
-    void OnCollisionExit2D(Collision2D collision)
+    IEnumerator ActivateDoubleCrystals()
     {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            chargeController.isGrounded2 = false;
-        }
-=======
+<<<<<<< HEAD
         isDoubleCrystals = true;
         animator.SetBool("isDoubleCrystal", true);
         yield return new WaitForSeconds(6f);
         isDoubleCrystals = false;
         animator.SetBool("isDoubleCrystal", false);
->>>>>>> Stashed changes
+=======
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            chargeController.isGrounded2 = false;
+        }
+>>>>>>> parent of effe87b (Level 5 completed)
     }
 
     IEnumerator ActivateDoubleJump()
     {
         isDoubleJump = true;
         chargeController.IncrementMaxJumps();
-        animator.SetBool("isDoubleJump", true);
 
         yield return new WaitForSeconds(3.5f);
 
         isDoubleJump = false;
         chargeController.DecrementMaxJumps();
-        animator.SetBool("isDoubleJump", false);
 
     }
 
