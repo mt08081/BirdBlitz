@@ -18,11 +18,14 @@ public class ShowSkin : MonoBehaviour
     public Button selectButton;
     public Select select;
     public BallsBlueprint displayImage; 
+    public TMP_Text crystalText;
+    //public Money moneyScript;
 
 
     void Start()
     {
         // Ensure the first ball is unlocked
+        
         balls[0].unlocked = true;
         PlayerPrefs.SetInt(balls[0].name, 1);
         
@@ -60,6 +63,11 @@ public class ShowSkin : MonoBehaviour
             Debug.LogError("Select Button is not assigned in the Inspector");
         }
 
+    }
+
+    void Update()
+    {
+        crystalText.text="" + moneyScript.money;
     }
 
     public void ChangeNext()

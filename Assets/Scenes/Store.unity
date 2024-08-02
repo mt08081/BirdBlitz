@@ -204,6 +204,7 @@ MonoBehaviour:
     price: 0
     unlocked: 0
     sprite: {fileID: 0}
+  crystalText: {fileID: 1373490953}
 --- !u!114 &276292292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +333,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &363858554 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5522387769139091981, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
+  m_PrefabInstance: {fileID: 1302269617}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &428085194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,6 +1180,86 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1302269617
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1884157272}
+    m_Modifications:
+    - target: {fileID: 5522387769139091981, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -788
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522387769139091981, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522387769139091981, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.395409
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522387769139091981, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522387769139091981, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522387769139091981, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522387769139091981, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522387769139091981, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522387769139091981, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522387769139091981, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5526560130984631681, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 509.576
+      objectReference: {fileID: 0}
+    - target: {fileID: 5526560130984631681, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 140.658
+      objectReference: {fileID: 0}
+    - target: {fileID: 5526560130984631681, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1433.4735
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689790404672649661, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
+      propertyPath: m_Name
+      value: Crystals
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
+--- !u!114 &1373490953 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5270459982735339818, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
+  m_PrefabInstance: {fileID: 1302269617}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1516355520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1287,6 +1373,7 @@ MonoBehaviour:
     price: 0
     unlocked: 0
     sprite: {fileID: 0}
+  crystalText: {fileID: 0}
 --- !u!114 &1516355524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1517,6 +1604,7 @@ MonoBehaviour:
     price: 0
     unlocked: 0
     sprite: {fileID: 0}
+  crystalText: {fileID: 0}
 --- !u!114 &1635387277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2178,6 +2266,7 @@ MonoBehaviour:
     price: 0
     unlocked: 0
     sprite: {fileID: 0}
+  crystalText: {fileID: 0}
 --- !u!114 &1853125204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2424,6 +2513,7 @@ RectTransform:
   - {fileID: 1789844321}
   - {fileID: 1869410621}
   - {fileID: 1698433862}
+  - {fileID: 363858554}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
