@@ -1283,11 +1283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 374b4da1578c9e64fbacee4aaece9700, type: 3}
       propertyPath: m_LocalRotation.y
-<<<<<<< Updated upstream
       value: -0
-=======
-      value: 0
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 374b4da1578c9e64fbacee4aaece9700, type: 3}
       propertyPath: m_LocalRotation.z

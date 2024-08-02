@@ -188,7 +188,6 @@ public class BallController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-<<<<<<< Updated upstream
         if (collision.gameObject.CompareTag("Ground"))
         {
             chargeController.isGrounded2 = true;
@@ -201,26 +200,17 @@ public class BallController : MonoBehaviour
         {
             chargeController.isGrounded2 = false;
         }
-=======
-        isDoubleCrystals = true;
-        animator.SetBool("isDoubleCrystal", true);
-        yield return new WaitForSeconds(6f);
-        isDoubleCrystals = false;
-        animator.SetBool("isDoubleCrystal", false);
->>>>>>> Stashed changes
     }
 
     IEnumerator ActivateDoubleJump()
     {
         isDoubleJump = true;
         chargeController.IncrementMaxJumps();
-        animator.SetBool("isDoubleJump", true);
 
         yield return new WaitForSeconds(3.5f);
 
         isDoubleJump = false;
         chargeController.DecrementMaxJumps();
-        animator.SetBool("isDoubleJump", false);
 
     }
 
