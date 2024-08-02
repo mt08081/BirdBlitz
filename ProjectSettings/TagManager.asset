@@ -8,6 +8,8 @@ TagManager:
   - Spike
   - Crystal
   - Portal
+  - Enemy
+  - Powerup
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 

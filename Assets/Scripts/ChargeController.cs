@@ -13,6 +13,13 @@ public class ChargeController : MonoBehaviour
     private bool isPaused = false; // Add this flag
     private Rigidbody2D ballRb;
 
+    private bool isGrounded = false;
+
+    public void SetGrounded(bool grounded)
+    {
+        this.isGrounded = grounded;
+    }
+
     void Start()
     {
         ballRb = GameObject.Find("Ball").GetComponent<Rigidbody2D>();
@@ -29,10 +36,16 @@ public class ChargeController : MonoBehaviour
             isCharging = true;
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && isGrounded)
         {
             isCharging = false;
             ApplyForce();
+            currentCharge = 0;
+            chargeBar.value = 0;
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            isCharging = false;
             currentCharge = 0;
             chargeBar.value = 0;
         }

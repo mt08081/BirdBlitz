@@ -94,54 +94,51 @@ using TMPro;
 
 public class BallController : MonoBehaviour
 {
-    //public float speed = 5.0f;
     public float rotationSpeed = 360.0f;
     private Rigidbody2D rb;
     private UIManager uiManager;
     private GameController gameController;
-    // public static BallController Instance;
-    // public BallsBlueprint selectedBall;
-    // public Sprite sprite;
-    // private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
-    
+    private bool isInvincible = false; // Track the invincibility state
+
+    private ChargeController chargeController;
+
+    private bool isGrounded = false;
+
+    public Transform groundFeeler; // Assign the transparent circle object in the Inspector
+    public float groundDetectionRadius = 0.1f; // Adjust this value to fine-tune detection
+
+    private Collider2D[] detectedColliders = new Collider2D[10];
+    public LayerMask groundLayerMask; // Assign the "Ground" layer in the Inspector
 
     void Start()
     {
-        // Debug.Log(" Selected ball from store is" + selectedBall.name);
-        // spriteRenderer = GetComponent<SpriteRenderer>();
-        // spriteRenderer.sprite = selectedBall.sprite;
+       
         rb = GetComponent<Rigidbody2D>();
         uiManager = FindObjectOfType<UIManager>();
         gameController = FindObjectOfType<GameController>();
-        // if (Instance == null)
-        // {
-        //     Instance = this;
-        //     DontDestroyOnLoad(gameObject);
-        // }
-        // else
-        // {
-        //     Destroy(gameObject);
-        // }
-        
-
+        animator = GetComponent<Animator>();
+        chargeController = GameObject.FindObjectOfType<ChargeController>();
     }
 
     void Update()
     {
-        // Debug.Log(" Selected ball from store is" + selectedBall.name);
-        // spriteRenderer = GetComponent<SpriteRenderer>();
-        // spriteRenderer.sprite = selectedBall.sprite;
-        //  Debug.Log(" Selected ball SPRITE  from store is" + selectedBall.sprite);
+        
         RollForward();
 
+        bool isGrounded = IsGrounded();
+        chargeController.SetGrounded(isGrounded);
+    }
+
+    bool IsGrounded()
+    {
+        int detectedColliderCount = Physics2D.OverlapCircleNonAlloc(groundFeeler.position, groundDetectionRadius, detectedColliders, groundLayerMask);
+        return detectedColliderCount > 0;
     }
 
     void RollForward()
     {
-        // Move the ball forward
-        // rb.velocity = new Vector2(speed, rb.velocity.y);
-
         // Rotate the ball to give the rolling effect
         transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
     }
@@ -155,20 +152,42 @@ public class BallController : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Spike"))
         {
-            gameController.TriggerLoss();
+            if (!isInvincible)
+            {
+                gameController.TriggerLoss();
+            }
+        }
+        else if (other.gameObject.CompareTag("Enemy"))
+        {
+            if (!isInvincible)
+            {
+                gameController.TriggerLoss();
+            }
         }
         else if (other.gameObject.CompareTag("Portal"))
         {
             gameController.TriggerWin();
         }
+        else if (other.gameObject.CompareTag("Powerup"))
+        {
+            Destroy(other.gameObject);
+            StartCoroutine(ActivateInvincibility());
+        }
     }
-    // public void SetSelectedBall(BallsBlueprint ball)
-    // {
-    //     selectedBall = ball;
-    // }
 
-    // public BallsBlueprint GetSelectedBall()
-    // {
-    //     return selectedBall;
-    // }
+    
+
+    IEnumerator ActivateInvincibility()
+    {
+        isInvincible = true;
+        animator.SetBool("isInvincible", true);
+
+        yield return new WaitForSeconds(3.5f); // Duration of the invincibility
+
+        isInvincible = false;
+        animator.SetBool("isInvincible", false);
+    }
+    
 }
+
+
