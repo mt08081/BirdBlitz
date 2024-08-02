@@ -245,6 +245,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 576712976994810938, guid: 33d4986240bac6b498a86ae7c1f3ccff, type: 3}
+<<<<<<< Updated upstream
       propertyPath: uiArea
       value: 
       objectReference: {fileID: 0}
@@ -256,6 +257,11 @@ PrefabInstance:
       propertyPath: restrictedArea
       value: 
       objectReference: {fileID: 0}
+=======
+      propertyPath: chargeBar
+      value: 
+      objectReference: {fileID: 1835856511}
+>>>>>>> Stashed changes
     - target: {fileID: 2171456155632168595, guid: 33d4986240bac6b498a86ae7c1f3ccff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.1562147
@@ -2810,6 +2816,17 @@ Transform:
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3984482498574629392, guid: a29dc89ebaa1d7547a5c779b4c0d78e7, type: 3}
   m_PrefabInstance: {fileID: 2066973410693636621}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1835856511 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1008772989941554832, guid: b7cb218260cdaf74fa68c9038d46cee3, type: 3}
+  m_PrefabInstance: {fileID: 1116520109}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
