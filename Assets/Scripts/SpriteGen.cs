@@ -6,8 +6,9 @@ public class SpriteGen : MonoBehaviour
 {
     public static SpriteGen Instance;
     public BallsBlueprint selectedBall;
-
-    public SpriteRenderer spriteRenderer;
+    public Sprite sprite;
+    public SpriteGen spriteRenderer; // this was Sprite Renderer
+    
 
     void Awake()
     {
@@ -18,13 +19,13 @@ public class SpriteGen : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+           // Destroy(gameObject);
         }
     }
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteGen>();
         UpdateSprite();
     }
 
