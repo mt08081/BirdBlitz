@@ -9,6 +9,7 @@ public class CharacterManager : MonoBehaviour
     public Text nameText;
     public SpriteRenderer artworkSprite;
     public ShowSkin bAll;
+    public Button selectButton;
 
     private int selectedOption=0;
     // Start is called before the first frame update
@@ -24,10 +25,20 @@ public class CharacterManager : MonoBehaviour
             Load();
         }
         UpdateCharacter(selectedOption);
+        if (selectButton != null)
+        {
+            selectButton.onClick.RemoveAllListeners();
+            selectButton.onClick.AddListener(OnSelectButtonClick);
+        }
+        else
+        {
+            Debug.LogError("Select Button is not assigned in the Inspector");
+        }
         
     }
     public void NextOption()
     {
+         Debug.Log("Owned balls are: " + string.Join(", ", bAll.ownedBalls));
         selectedOption++;
         if (selectedOption >= characterDB.CharacterCount)
         {
@@ -47,8 +58,12 @@ public class CharacterManager : MonoBehaviour
     }
     public void UpdateCharacter(int selectedOption)
     {
+         
         Character character = characterDB.GetCharacter(selectedOption);
-         nameText.text=character.characterName;
+        Debug.Log("CHARACTER FOR DISPLAY IS" + character.characterName);
+        Debug.Log("CHARACTER SPRITE FOR DISPLAY IS" + character.characterSprite);
+        artworkSprite.sprite=character.characterSprite;
+         //nameText.text=character.characterName;
          nameText.text=character.characterName;
         bool flag=bAll.ReturnBallName(character.characterName); // (ownedBalls.Contains(selectedBall.name))
         Debug.Log(" FLAG IS " + flag);
@@ -74,5 +89,24 @@ public class CharacterManager : MonoBehaviour
     }
 
     // Update is called once per frame
+    public void OnSelectButtonClick()
+    {
+        Debug.Log("SELECT BUTTON PRESSED");
+        UpdateCharacter(0);
+        //UpdateCharacter(bAll.current_ball_index);
+        Debug.Log("Owned balls are: " + string.Join(", ", bAll.ownedBalls));
+        // BallsBlueprint selectedBall = balls[current_ball_index];
+        // Debug.Log("Selected Ball: " + selectedBall.name);
+
+        // if (ownedBalls.Contains(selectedBall.name))
+        // {
+        //     SpriteGen.Instance.SetSelectedBall(selectedBall);
+        //     Debug.Log("Selected Ball: " + selectedBall.sprite);
+        // }
+        // else
+        // {
+        //     Debug.LogWarning("Ball is not owned or does not exist.");
+        // }
+    }
   
 }

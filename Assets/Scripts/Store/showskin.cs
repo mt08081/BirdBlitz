@@ -227,15 +227,15 @@ public class ShowSkin : MonoBehaviour
 
         UpdateBuyButtonText();
 
-        if (selectButton != null)
-        {
-            selectButton.onClick.RemoveAllListeners();
-            selectButton.onClick.AddListener(OnSelectButtonClick);
-        }
-        else
-        {
-            Debug.LogError("Select Button is not assigned in the Inspector");
-        }
+        // if (selectButton != null)
+        // {
+        //     selectButton.onClick.RemoveAllListeners();
+        //     selectButton.onClick.AddListener(OnSelectButtonClick);
+        // }
+        // else
+        // {
+        //     Debug.LogError("Select Button is not assigned in the Inspector");
+        // }
     }
 
     void Update()
@@ -249,7 +249,7 @@ public class ShowSkin : MonoBehaviour
     public void ChangeNext()
     {
        // obj.NextOption();
-        Debug.Log("Owned balls are: " + string.Join(", ", ownedBalls));
+        Debug.Log("Owned balls are when next button clicked: " + string.Join(", ", ownedBalls));
 
         skins[current_ball_index].SetActive(false);
         current_ball_index++;
@@ -336,37 +336,37 @@ public class ShowSkin : MonoBehaviour
         }
     }
 
-    public void OnSelectButtonClick()
-    {
-        Debug.Log("SELECT BUTTON PRESSED");
-        obj.UpdateCharacter(current_ball_index);
-        // BallsBlueprint selectedBall = balls[current_ball_index];
-        // Debug.Log("Selected Ball: " + selectedBall.name);
+    // public void OnSelectButtonClick()
+    // {
+    //     Debug.Log("SELECT BUTTON PRESSED");
+    //     UpdateCharacter(current_ball_index);
+    //     // BallsBlueprint selectedBall = balls[current_ball_index];
+    //     // Debug.Log("Selected Ball: " + selectedBall.name);
 
-        // if (ownedBalls.Contains(selectedBall.name))
-        // {
-        //     SpriteGen.Instance.SetSelectedBall(selectedBall);
-        //     Debug.Log("Selected Ball: " + selectedBall.sprite);
-        // }
-        // else
-        // {
-        //     Debug.LogWarning("Ball is not owned or does not exist.");
-        // }
-    }
+    //     // if (ownedBalls.Contains(selectedBall.name))
+    //     // {
+    //     //     SpriteGen.Instance.SetSelectedBall(selectedBall);
+    //     //     Debug.Log("Selected Ball: " + selectedBall.sprite);
+    //     // }
+    //     // else
+    //     // {
+    //     //     Debug.LogWarning("Ball is not owned or does not exist.");
+    //     // }
+    // }
 
-    public void UpdateDisplayImage()
-    {
-        BallsBlueprint selectedBall = balls[current_ball_index];
-        if (ownedBalls.Contains(selectedBall.name))
-        {
-            Debug.Log("Selected Ball SPRTE: " + selectedBall.sprite);
-            if (selectedBall != null)
-            {
-                displayImage.sprite = selectedBall.sprite;
-                Debug.Log("Selected ball SPRITE from store to go is" + selectedBall.sprite);
-            }
-        }
-    }
+    // public void UpdateDisplayImage()
+    // {
+    //     BallsBlueprint selectedBall = balls[current_ball_index];
+    //     if (ownedBalls.Contains(selectedBall.name))
+    //     {
+    //         Debug.Log("Selected Ball SPRTE: " + selectedBall.sprite);
+    //         if (selectedBall != null)
+    //         {
+    //             displayImage.sprite = selectedBall.sprite;
+    //             Debug.Log("Selected ball SPRITE from store to go is" + selectedBall.sprite);
+    //         }
+    //     }
+    // }
     public bool ReturnBallName(string name)
     {
         if (ownedBalls.Contains(name))
