@@ -379,6 +379,16 @@ public class ShowSkin : MonoBehaviour
         }
 
     }
+
+    public int GetCurrentBallIndex()
+    {
+        return current_ball_index;
+    }
+
+    public void SetCurrentBallIndex(int value)
+    {
+        current_ball_index = value;
+    }
     // public string Getname( int index)
     // {
     //     if (index==0)
