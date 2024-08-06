@@ -7,7 +7,7 @@ public class Home : MonoBehaviour
 {
    public void OnPlayButton ()
     {
-        SceneManager.LoadScene ("SampleScene");
+        SceneManager.LoadScene ("Level_1");
     }
 
     public void OnShopButton ()
