@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class level_select : MonoBehaviour
 {
@@ -23,11 +24,6 @@ public class level_select : MonoBehaviour
     {
         SceneManager.LoadScene ("Level_4");
     }
-
-//    public void Onlvl5Button ()
-//    {
-//        SceneManager.LoadScene ("Level_5");
-//    }
 
     public void Onbackb ()
     {
