@@ -10,7 +10,7 @@ public class Menu : MonoBehaviour
 
     public void OnBackButton()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     // Start is called before the first frame update
