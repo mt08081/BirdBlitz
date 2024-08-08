@@ -687,6 +687,15 @@ MonoBehaviour:
   bAll: {fileID: 0}
   selectButton: {fileID: 0}
   ball_index: 0
+  current_skins: []
+  ownedBalls_current: []
+  check_ball:
+    name: 
+    index: 0
+    price: 0
+    unlocked: 0
+    sprite: {fileID: 0}
+  ball_list: []
   selectedOption: 1
 --- !u!1 &878215484
 GameObject:
@@ -1037,23 +1046,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 628778717015391861, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -151
+      value: -157
       objectReference: {fileID: 0}
     - target: {fileID: 628778717015391861, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1208
+      value: 1231
       objectReference: {fileID: 0}
     - target: {fileID: 628778717015391861, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 343
+      value: 322
       objectReference: {fileID: 0}
     - target: {fileID: 2646431310218138210, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1453
+      value: 1448
       objectReference: {fileID: 0}
     - target: {fileID: 2646431310218138210, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 343
+      value: 313
       objectReference: {fileID: 0}
     - target: {fileID: 5522387769139091981, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1101,15 +1110,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5526560130984631681, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 140.658
+      value: 138.155
       objectReference: {fileID: 0}
     - target: {fileID: 5526560130984631681, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1363
+      value: 1421
       objectReference: {fileID: 0}
     - target: {fileID: 5526560130984631681, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 349
+      value: 325
       objectReference: {fileID: 0}
     - target: {fileID: 5689790404672649661, guid: 4a14520b95850ba499fee7c507ca60a7, type: 3}
       propertyPath: m_Name
@@ -1209,8 +1218,8 @@ Transform:
   m_GameObject: {fileID: 1498803238}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0334, y: -0.0291, z: 0}
-  m_LocalScale: {x: 0.93855953, y: 0.9423668, z: 1}
+  m_LocalPosition: {x: 0.078, y: -0.0291, z: 0}
+  m_LocalScale: {x: 1.1935743, y: 0.9423668, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1251,7 +1260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0071402, y: -375}
+  m_AnchoredPosition: {x: 0.000009199604, y: -334}
   m_SizeDelta: {x: 429.4, y: 122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1675573339
@@ -1384,7 +1393,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 669, y: -375}
+  m_AnchoredPosition: {x: 668, y: -334}
   m_SizeDelta: {x: 336, y: 122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1698433863
@@ -1653,7 +1662,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.615, y: 246}
+  m_AnchoredPosition: {x: 18, y: 215.28}
   m_SizeDelta: {x: 444.77, y: 195.561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1789844322
@@ -1914,7 +1923,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -669, y: -375}
+  m_AnchoredPosition: {x: -668, y: -334}
   m_SizeDelta: {x: 336, y: 122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1869410622
@@ -2572,6 +2581,18 @@ PrefabInstance:
       propertyPath: buyButtonText
       value: 
       objectReference: {fileID: 654691108}
+    - target: {fileID: 5010103145897556370, guid: c0aa1d325c2363141a8e25c8a6616991, type: 3}
+      propertyPath: ownedBalls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010103145897556370, guid: c0aa1d325c2363141a8e25c8a6616991, type: 3}
+      propertyPath: ownedBalls.Array.data[2]
+      value: none
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010103145897556370, guid: c0aa1d325c2363141a8e25c8a6616991, type: 3}
+      propertyPath: ownedBalls.Array.data[3]
+      value: none
+      objectReference: {fileID: 0}
     - target: {fileID: 6223816160156214538, guid: c0aa1d325c2363141a8e25c8a6616991, type: 3}
       propertyPath: m_SortingOrder
       value: 0

@@ -2005,6 +2005,15 @@ MonoBehaviour:
   bAll: {fileID: 5010103145897556370, guid: c0aa1d325c2363141a8e25c8a6616991, type: 3}
   selectButton: {fileID: 0}
   ball_index: 0
+  current_skins: []
+  ownedBalls_current: []
+  check_ball:
+    name: 
+    index: 0
+    price: 0
+    unlocked: 0
+    sprite: {fileID: 0}
+  ball_list: []
   selectedOption: 0
 --- !u!1 &966054781
 GameObject:
@@ -3461,6 +3470,15 @@ MonoBehaviour:
   bAll: {fileID: 5010103146189569571}
   selectButton: {fileID: 0}
   ball_index: 0
+  current_skins: []
+  ownedBalls_current: []
+  check_ball:
+    name: 
+    index: 0
+    price: 0
+    unlocked: 0
+    sprite: {fileID: 0}
+  ball_list: []
   selectedOption: 0
 --- !u!1 &1905861094 stripped
 GameObject:
@@ -4288,6 +4306,10 @@ PrefabInstance:
     - target: {fileID: 3554435280529746023, guid: f91e93976fd09fe4083b4608d311beee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266677874806176218, guid: f91e93976fd09fe4083b4608d311beee, type: 3}
+      propertyPath: ownedBalls.Array.data[2]
+      value: football
       objectReference: {fileID: 0}
     - target: {fileID: 8516867313366799355, guid: f91e93976fd09fe4083b4608d311beee, type: 3}
       propertyPath: m_Name

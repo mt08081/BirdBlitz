@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 {
     public TMP_Text crystalCountText; // Use TMP_Text for TextMeshPro
     public int crystalCount = 0;
+    
 
     public Button menuButton;
     public GameObject menuPanel;
@@ -22,6 +23,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject Ball;
     private Vector2 storedVelocity;
+    public  Money moneyScript2;
 
     void Start()
     {
@@ -40,6 +42,8 @@ public class UIManager : MonoBehaviour
     {
         crystalCount++;
         UpdateCrystalCountText();
+        moneyScript2.addMoney(30);
+
     }
 
     private void UpdateCrystalCountText()

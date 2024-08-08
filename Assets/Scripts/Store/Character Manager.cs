@@ -12,6 +12,9 @@ public class CharacterManager : MonoBehaviour
     public Button selectButton;
     public int  ball_index;
     public GameObject[] current_skins;
+    public List<string> ownedBalls_current;
+    public BallsBlueprint check_ball;
+    public BallsBlueprint[] ball_list;
     
 
 
@@ -46,13 +49,28 @@ public class CharacterManager : MonoBehaviour
     void Update()
     {
        //ball_index = bAll.GetCurrentBallIndex(); 
-
+        ball_list=bAll.Getballs();
+        //Debug.Log (" Balls when GETBalls " + string.Join(", ", ball_list));
         // Debug.Log("Selection index is " + bAll.GetCurrentBallIndex());
+        int index2= bAll.GetCurrentBallIndex();
+        string ball_name = ball_list[index2].name;
+    
+        ownedBalls_current = bAll.GetOwnedBallslist(); 
+        Debug.Log("Owned balls are when UPDATE button clicked: " + string.Join(", ", ownedBalls_current));
+        if (ownedBalls_current.Contains(ball_name))
+        {
+            UpdateCharacter(bAll.GetCurrentBallIndex()); // this works!!
 
-        UpdateCharacter(bAll.GetCurrentBallIndex()); // this works!!
-        current_skins=GetOwnedBallslist();
+        }
+        else
+        {
+            Debug.Log("Curent ball is nto in owned ball lsit");
+
+        }
+        
+        // Now you can call the method
        /// basically check if currnet ball is in owned list , then not buy else buy and add to owned list . then also save data!. also ened to figure out for money then for sleect button (not imp)
-
+         
         
         
         //UpdateCharacter(selectedOption);

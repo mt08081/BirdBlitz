@@ -228,6 +228,7 @@ public class Money : MonoBehaviour
     public void addMoney(int money_to_add)
     {
         money += money_to_add;
+        Debug.Log("Money uppon add  is" + money);
         UpdateMoneyText();
     }
 

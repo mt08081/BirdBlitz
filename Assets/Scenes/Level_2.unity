@@ -2663,6 +2663,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3727399082778536868, guid: 0d8d95e54839d7b40b6ba9c291285b69, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3727399082778536868, guid: 0d8d95e54839d7b40b6ba9c291285b69, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 3727399082778536868, guid: 0d8d95e54839d7b40b6ba9c291285b69, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 3727399082778536868, guid: 0d8d95e54839d7b40b6ba9c291285b69, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 3727399082778536868, guid: 0d8d95e54839d7b40b6ba9c291285b69, type: 3}
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
@@ -3148,6 +3164,15 @@ MonoBehaviour:
   bAll: {fileID: 1960532574}
   selectButton: {fileID: 0}
   ball_index: 0
+  current_skins: []
+  ownedBalls_current: []
+  check_ball:
+    name: 
+    index: 0
+    price: 0
+    unlocked: 0
+    sprite: {fileID: 0}
+  ball_list: []
   selectedOption: 0
 --- !u!212 &1898052011 stripped
 SpriteRenderer:
