@@ -11,6 +11,9 @@ public class CharacterManager : MonoBehaviour
     public ShowSkin bAll;
     public Button selectButton;
     public int  ball_index;
+    public GameObject[] current_skins;
+    
+
 
     public int selectedOption=0;
     // Start is called before the first frame update
@@ -35,6 +38,7 @@ public class CharacterManager : MonoBehaviour
         else
         {
             Debug.LogError("Select Button is not assigned in the Inspector");
+
         }
         
     }
@@ -46,6 +50,9 @@ public class CharacterManager : MonoBehaviour
         // Debug.Log("Selection index is " + bAll.GetCurrentBallIndex());
 
         UpdateCharacter(bAll.GetCurrentBallIndex()); // this works!!
+        current_skins=GetOwnedBallslist();
+       /// basically check if currnet ball is in owned list , then not buy else buy and add to owned list . then also save data!. also ened to figure out for money then for sleect button (not imp)
+
         
         
         //UpdateCharacter(selectedOption);
