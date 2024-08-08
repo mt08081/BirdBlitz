@@ -114,6 +114,7 @@ public class BallController : MonoBehaviour
 
     private Collider2D[] detectedColliders = new Collider2D[10];
     public LayerMask groundLayerMask; // Assign the "Ground" layer in the Inspector
+    public  Money moneyScript2;
 
     void Start()
     {
@@ -155,6 +156,9 @@ public class BallController : MonoBehaviour
         {
             Destroy(other.gameObject);
             uiManager.IncrementCrystalCount();
+            moneyScript2.addMoney(30);
+            Debug.Log("Money is on a level upon crystal" + moneyScript2.money);
+
         }
         else if (other.gameObject.CompareTag("Spike"))
         {

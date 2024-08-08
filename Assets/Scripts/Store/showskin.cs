@@ -261,10 +261,12 @@ public class ShowSkin : MonoBehaviour
         UpdateBuyButtonText();
         obj.UpdateCharacter(current_ball_index);
         obj.Save();
+        
     }
 
     public void ChangePrevious()
     {
+        //ownedBalls.Clear();
         skins[current_ball_index].SetActive(false);
         current_ball_index--;
         if (current_ball_index == -1)
@@ -276,7 +278,8 @@ public class ShowSkin : MonoBehaviour
         UpdateBuyButtonText();
         obj.UpdateCharacter(current_ball_index);
         obj.Save();
-    }
+        SaveOwnedBalls();
+;    }
 
     public void BuyCurrentBallWrapper()
     {

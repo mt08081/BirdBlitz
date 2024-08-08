@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject Ball;
     private Vector2 storedVelocity;
-    public  Money moneyScript2;
+    // public  Money moneyScript2;
 
     void Start()
     {
@@ -42,9 +42,10 @@ public class UIManager : MonoBehaviour
     {
         crystalCount++;
         UpdateCrystalCountText();
-        moneyScript2.addMoney(30);
+        // moneyScript2.addMoney(30);
 
     }
+    
 
     private void UpdateCrystalCountText()
     {

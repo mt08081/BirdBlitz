@@ -2583,7 +2583,7 @@ PrefabInstance:
       objectReference: {fileID: 654691108}
     - target: {fileID: 5010103145897556370, guid: c0aa1d325c2363141a8e25c8a6616991, type: 3}
       propertyPath: ownedBalls.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5010103145897556370, guid: c0aa1d325c2363141a8e25c8a6616991, type: 3}
       propertyPath: ownedBalls.Array.data[2]
