@@ -201,7 +201,7 @@ public class Money : MonoBehaviour
 
     void Start()
     {
-        money = 1000;
+       money = PlayerPrefs.GetInt("Money", 1000);
         if (add_money != null)
         {
             add_money.onClick.AddListener(() => addMoney(30));
@@ -209,6 +209,10 @@ public class Money : MonoBehaviour
         else
         {
             Debug.LogError("Add Money button is not assigned in the Inspector");
+        }
+        void Update()
+        {
+            UpdateMoneyText();
         }
 
         UpdateMoneyText(); // Initialize the money text at the start
@@ -229,6 +233,7 @@ public class Money : MonoBehaviour
     {
         money += money_to_add;
         Debug.Log("Money uppon add  is" + money);
+        SaveMoney();
         UpdateMoneyText();
     }
 
@@ -236,6 +241,7 @@ public class Money : MonoBehaviour
     {
         money -= money_to_subtract;
         UpdateMoneyText(); // Update the money text after subtracting money
+        SaveMoney();
     }
 
     public int GetMoney()
@@ -253,5 +259,24 @@ public class Money : MonoBehaviour
         {
             Debug.LogError("MoneyText is not assigned in the Inspector");
         }
+    }
+    void SaveMoney()
+
+    {
+
+        PlayerPrefs.SetInt("Money", money);
+
+        PlayerPrefs.Save();
+
+    }
+
+
+
+    void OnApplicationQuit()
+
+    {
+
+        SaveMoney(); // Ensure money is saved when the application is closed
+
     }
 }

@@ -3184,6 +3184,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8365127118574400921, guid: 0d8d95e54839d7b40b6ba9c291285b69, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1898052007}
+    - targetCorrespondingSourceObject: {fileID: 8365127118574400921, guid: 0d8d95e54839d7b40b6ba9c291285b69, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1898052013}
     - targetCorrespondingSourceObject: {fileID: 3009910860364515183, guid: 0d8d95e54839d7b40b6ba9c291285b69, type: 3}
       insertIndex: -1
       addedObject: {fileID: 930636108}
@@ -3480,6 +3483,22 @@ MonoBehaviour:
     sprite: {fileID: 0}
   ball_list: []
   selectedOption: 0
+--- !u!114 &1898052013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898052005}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9a9d598825b0c4bb7180865872bcfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  add_money: {fileID: 0}
+  moneyText: {fileID: 0}
+  subtract_money: {fileID: 0}
+  money: 0
 --- !u!1 &1905861094 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4538968426786057320, guid: 2409724a2ae828540bd917096016dfac, type: 3}
@@ -4306,6 +4325,10 @@ PrefabInstance:
     - target: {fileID: 3554435280529746023, guid: f91e93976fd09fe4083b4608d311beee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266677874806176218, guid: f91e93976fd09fe4083b4608d311beee, type: 3}
+      propertyPath: ownedBalls.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8266677874806176218, guid: f91e93976fd09fe4083b4608d311beee, type: 3}
       propertyPath: ownedBalls.Array.data[2]

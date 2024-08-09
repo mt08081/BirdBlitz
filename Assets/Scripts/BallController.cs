@@ -133,6 +133,7 @@ public class BallController : MonoBehaviour
 
         bool isGrounded = IsGrounded();
         chargeController.SetGrounded(isGrounded);
+        //OnTriggerEnter2D(other);
 
         // Get the y value of the object
         Debug.Log(transform.position.y);
