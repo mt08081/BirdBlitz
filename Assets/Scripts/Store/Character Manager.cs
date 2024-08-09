@@ -54,6 +54,7 @@ public class CharacterManager : MonoBehaviour
         // Debug.Log("Selection index is " + bAll.GetCurrentBallIndex());
         int index2= bAll.GetCurrentBallIndex();
         string ball_name = ball_list[index2].name;
+        Debug.Log("BALL NAME IS FOR SPRITE " + ball_name);
     
         ownedBalls_current = bAll.GetOwnedBallslist(); 
         Debug.Log("Owned balls are when UPDATE button clicked: " + string.Join(", ", ownedBalls_current));
