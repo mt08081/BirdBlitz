@@ -115,19 +115,25 @@ public class BallController : MonoBehaviour
     private Collider2D[] detectedColliders = new Collider2D[10];
     public LayerMask groundLayerMask; // Assign the "Ground" layer in the Inspector
     public  Money moneyScript2;
+    int money3;
 
     void Start()
     {
+
        
         rb = GetComponent<Rigidbody2D>();
         uiManager = FindObjectOfType<UIManager>();
         gameController = FindObjectOfType<GameController>();
         animator = GetComponent<Animator>();
         chargeController = GameObject.FindObjectOfType<ChargeController>();
+        
+        money3= moneyScript2.GetMoney();
+        Debug.Log("MOENY ON LVL IS " + money3);
     }
 
     void Update()
     {
+       
         
         RollForward();
 
@@ -137,6 +143,10 @@ public class BallController : MonoBehaviour
 
         // Get the y value of the object
         Debug.Log(transform.position.y);
+        Debug.Log( "before  MOENY ON LVL UPD IS " );
+        money3= PlayerPrefs.GetInt("Money", 1000);
+        Debug.Log("MOENY ON LVL UPD IS " );
+        Debug.Log(money3);
     }
 
     bool IsGrounded()
@@ -157,7 +167,7 @@ public class BallController : MonoBehaviour
         {
             Destroy(other.gameObject);
             uiManager.IncrementCrystalCount();
-            moneyScript2.addMoney(30);
+            // moneyScript2.addMoney(30);
             Debug.Log("Money is on a level upon crystal" + moneyScript2.money);
 
         }
@@ -177,7 +187,10 @@ public class BallController : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Portal"))
         {
+            //Debug.Log(" TOTAL CRYSTAL ARE "+ uiManager.crystalCount);
             gameController.TriggerWin();
+           
+
         }
         else if (other.gameObject.CompareTag("Powerup_G"))
         {

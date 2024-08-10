@@ -24,9 +24,12 @@ public class UIManager : MonoBehaviour
     public GameObject Ball;
     private Vector2 storedVelocity;
     // public  Money moneyScript2;
+    public Money script;
+    public int money2;
 
     void Start()
     {
+       // money2= PlayerPrefs.GetInt("Money", 1000);
         UpdateCrystalCountText();
 
         menuButton.onClick.AddListener(ToggleMenuPanel);
@@ -41,7 +44,10 @@ public class UIManager : MonoBehaviour
     public void IncrementCrystalCount()
     {
         crystalCount++;
+        
         UpdateCrystalCountText();
+        // SetMoney(30);
+        
         // moneyScript2.addMoney(30);
 
     }
@@ -107,4 +113,10 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+    //  public void SetMoney(int money_get)
+    // {
+    //     script.money+=money_get;
+    //     script.UpdateMoneyText();
+    //     script.SaveMoney();
+    // }
 }

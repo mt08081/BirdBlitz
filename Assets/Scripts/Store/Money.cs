@@ -246,10 +246,12 @@ public class Money : MonoBehaviour
 
     public int GetMoney()
     {
+        money = PlayerPrefs.GetInt("Money", 1000);
+
         return money;
     }
 
-    void UpdateMoneyText()
+    public void UpdateMoneyText()
     {
         if (moneyText != null)
         {
@@ -260,7 +262,7 @@ public class Money : MonoBehaviour
             Debug.LogError("MoneyText is not assigned in the Inspector");
         }
     }
-    void SaveMoney()
+    public void SaveMoney()
 
     {
 
@@ -279,4 +281,11 @@ public class Money : MonoBehaviour
         SaveMoney(); // Ensure money is saved when the application is closed
 
     }
+    public void LoadMoney()
+    {
+          money = PlayerPrefs.GetInt("Money", 1000);
+
+    }
+
+   
 }
