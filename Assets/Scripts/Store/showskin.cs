@@ -317,17 +317,20 @@ public class ShowSkin : MonoBehaviour
             if (ownedBalls.Contains(currentBall.name))
             {
                 buyButton.interactable = false;
-                buyButtonText.text = currentBall.name + " already owned";
+                //buyButtonText.text = currentBall.name + " already owned";
+                buyButtonText.text = "Already Owned";
             }
             else
             {
                 if (currentBall.price == 0)
                 {
-                    buyButtonText.text = currentBall.name + " Free";
+                    //buyButtonText.text = currentBall.name + " Free";
+                    buyButtonText.text =  "Free";
                 }
                 else
                 {
-                    buyButtonText.text = "Buy " + currentBall.name + " for " + currentBall.price.ToString() + " Money";
+                    //buyButtonText.text = "Buy " + currentBall.name + " for " + currentBall.price.ToString() + " Money";
+                    buyButtonText.text = "Buy for " + currentBall.price.ToString() + " Money";
                 }
                 buyButton.interactable = true;
             }

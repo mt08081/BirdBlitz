@@ -19,3 +19,31 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: ed3239fa6a571164c91ac3dffe828f16, type: 3}
   - characterName: football
     characterSprite: {fileID: 21300000, guid: cd8e584ef06610a47810a952b743f355, type: 3}
+  - characterName: tennis
+    characterSprite: {fileID: 21300000, guid: 62214ed663a745944a758da5f99b88b2, type: 3}
+  - characterName: batman
+    characterSprite: {fileID: 21300000, guid: 627a7e7b2ffd147459ba188260d6a0be, type: 3}
+  - characterName: blue sparkly
+    characterSprite: {fileID: 21300000, guid: 039d4951dc87ef34a9953cfbf413b092, type: 3}
+  - characterName: captain america
+    characterSprite: {fileID: 21300000, guid: 4eaa4492d14a87746854956b5a4f1f11, type: 3}
+  - characterName: 'Football '
+    characterSprite: {fileID: 21300000, guid: 91622abe95b5ae44e9c60dfe27f6dbe8, type: 3}
+  - characterName: Golden Ball
+    characterSprite: {fileID: 21300000, guid: 56f0318177a4a7e4e997761e2040da6e, type: 3}
+  - characterName: Ironman Ball
+    characterSprite: {fileID: 21300000, guid: 3379e557abee8ca4ca9ea7c1554d0316, type: 3}
+  - characterName: Pink Sparkly
+    characterSprite: {fileID: 21300000, guid: 808901874da73714b83fa761a1f38504, type: 3}
+  - characterName: Pokemon Ball
+    characterSprite: {fileID: 21300000, guid: cd13a5f4b89fb124aaf278e832f1b470, type: 3}
+  - characterName: Red Ball
+    characterSprite: {fileID: 21300000, guid: 42e5d6a3a6000f04c9c4b4867e3b8695, type: 3}
+  - characterName: Funky Ball
+    characterSprite: {fileID: 21300000, guid: e48b4262cda5fda4599e08519769a1aa, type: 3}
+  - characterName: Sonic Ball
+    characterSprite: {fileID: 21300000, guid: 6df4b2915f79fa242a7f71337d358450, type: 3}
+  - characterName: Star Ball
+    characterSprite: {fileID: 21300000, guid: 8bc334d3e61891746885888addb8dc66, type: 3}
+  - characterName: Superman Ball
+    characterSprite: {fileID: 21300000, guid: eb7dd1548c2cf8140a82c06e4afac4cc, type: 3}

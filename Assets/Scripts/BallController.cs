@@ -126,7 +126,10 @@ public class BallController : MonoBehaviour
         gameController = FindObjectOfType<GameController>();
         animator = GetComponent<Animator>();
         chargeController = GameObject.FindObjectOfType<ChargeController>();
-        
+         if (moneyScript2 == null)
+        {
+            moneyScript2 = FindObjectOfType<Money>();
+        }
         money3= moneyScript2.GetMoney();
         Debug.Log("MOENY ON LVL IS " + money3);
     }
@@ -187,9 +190,11 @@ public class BallController : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Portal"))
         {
-            //Debug.Log(" TOTAL CRYSTAL ARE "+ uiManager.crystalCount);
+            Debug.Log(" TOTAL CRYSTAL ARE "+ uiManager.crystalCount);
             gameController.TriggerWin();
-           
+            Debug.Log(" TOTAL CRYSTAL ARE "+ uiManager.crystalCount);
+
+            moneyScript2.addMoney(uiManager.crystalCount);
 
         }
         else if (other.gameObject.CompareTag("Powerup_G"))

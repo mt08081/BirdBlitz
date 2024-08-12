@@ -231,6 +231,9 @@ public class Money : MonoBehaviour
 
     public void addMoney(int money_to_add)
     {
+        Debug.Log("Add money called on crystal collect");
+        Debug.Log("Money to  add  is");
+        Debug.Log(money_to_add);
         money += money_to_add;
         Debug.Log("Money uppon add  is" + money);
         SaveMoney();
