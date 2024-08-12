@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CharacterManager : MonoBehaviour
 {
     public CharacterDatabase characterDB;
-    public Text nameText;
+    //public Text nameText;
     public SpriteRenderer artworkSprite;
     public ShowSkin bAll;
     public Button selectButton;
@@ -65,6 +65,7 @@ public class CharacterManager : MonoBehaviour
         }
         else
         {
+            UpdateCharacter(0);
             Debug.Log("Curent ball is nto in owned ball lsit");
 
         }
@@ -102,11 +103,11 @@ public class CharacterManager : MonoBehaviour
     {
          
         Character character = characterDB.GetCharacter(ball_index);
-        Debug.Log("CHARACTER FOR DISPLAY IS" + character.characterName);
+       //Debug.Log("CHARACTER FOR DISPLAY IS" + character.characterName);
         Debug.Log("CHARACTER SPRITE FOR DISPLAY IS" + character.characterSprite);
         artworkSprite.sprite=character.characterSprite;
          //nameText.text=character.characterName;
-         nameText.text=character.characterName;
+        //nameText.text=character.characterName;
         //bool flag=bAll.ReturnBallName(character.characterName); // (ownedBalls.Contains(selectedBall.name))
         bool flag=false;
         // Debug.Log(" FLAG IS " + flag);

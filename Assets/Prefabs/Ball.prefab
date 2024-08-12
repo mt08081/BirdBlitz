@@ -283,12 +283,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 388c0f3149026494eab9ea3ea29509cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 360
+  rotationSpeed: -360
   groundFeeler: {fileID: 75525170543456705}
   groundDetectionRadius: 0.8
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  moneyScript2: {fileID: 0}
 --- !u!95 &2565579970691176716
 Animator:
   serializedVersion: 5

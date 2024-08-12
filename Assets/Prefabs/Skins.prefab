@@ -1153,6 +1153,7 @@ MonoBehaviour:
   - {fileID: 5702797905130178949}
   - {fileID: 6040180482074002910}
   - {fileID: 5114333962210465845}
+  - {fileID: 5114333962210465845}
   current_ball_index: 0
   balls:
   - name: basketball
@@ -1301,7 +1302,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterDB: {fileID: 11400000, guid: eea2a54b1ba9603488f19f4cb000dff2, type: 2}
-  nameText: {fileID: 0}
   artworkSprite: {fileID: 6223816160156214538}
   bAll: {fileID: 5010103145897556370}
   selectButton: {fileID: 0}

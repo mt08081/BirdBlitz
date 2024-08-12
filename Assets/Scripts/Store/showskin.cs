@@ -266,7 +266,7 @@ public class ShowSkin : MonoBehaviour
 
     public void ChangePrevious()
     {
-        ownedBalls.Clear();
+        //ownedBalls.Clear(); // used for testing and debugging!
         skins[current_ball_index].SetActive(false);
         current_ball_index--;
         if (current_ball_index == -1)

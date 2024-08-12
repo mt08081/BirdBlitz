@@ -43,6 +43,8 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: e48b4262cda5fda4599e08519769a1aa, type: 3}
   - characterName: Sonic Ball
     characterSprite: {fileID: 21300000, guid: 6df4b2915f79fa242a7f71337d358450, type: 3}
+  - characterName: Spiderman Ball
+    characterSprite: {fileID: 21300000, guid: 3b81aff587f34cd409ca5a3a3d6662ca, type: 3}
   - characterName: Star Ball
     characterSprite: {fileID: 21300000, guid: 8bc334d3e61891746885888addb8dc66, type: 3}
   - characterName: Superman Ball
