@@ -201,7 +201,7 @@ public class Money : MonoBehaviour
 
     void Start()
     {
-       money = PlayerPrefs.GetInt("Money", 1000);
+       money = PlayerPrefs.GetInt("Money", 0);
         if (add_money != null)
         {
             add_money.onClick.AddListener(() => addMoney(30));
